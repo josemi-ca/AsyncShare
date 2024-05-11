@@ -45,7 +45,7 @@ function captureScreen(callback) {
         callback(screen);
     }, function (error) {
         console.error(error);
-        alert('Unable to capture your screen. Please check console logs.\n' + error);
+        alert('Errror al capturar la pantalla. Revise los permisos.');
     });
 }
 
@@ -96,7 +96,7 @@ function uploadVideo(blob) {
         .catch(error => {
             console.error('Error uploading video:', error);
             uploadingMessage.style.display = 'none';
-            alert('Error uploading video. Please try again.');
+            alert('Error de subida de video. Inténtelo de nuevo.');
         });
 }
 
