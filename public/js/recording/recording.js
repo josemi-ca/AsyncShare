@@ -2,7 +2,7 @@
 let video = document.querySelector('video');
 
 if (!navigator.mediaDevices || !navigator.mediaDevices.getDisplayMedia) {
-    let error = 'Your browser does NOT support the getDisplayMedia API.';
+    let error = 'Navegador no soportado. Por favor, acceda desde un PC/Mac.'; //No getDisplayMedia API
     document.querySelector('h1').textContent = error;
 
     video.style.display = 'none';
