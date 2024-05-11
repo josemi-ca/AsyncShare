@@ -14,6 +14,8 @@
 
 </div>
 
+<script src="js/pwa/install_prompt.js"></script>
+
 <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
 <script src="js/recording/recording.js"></script>
 
