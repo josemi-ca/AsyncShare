@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('videos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->nullable()->index();
             $table->string('uid')->unique();
             $table->string('path');
             $table->timestamps();
