@@ -6,12 +6,16 @@
         <p class="col-lg-8 mx-auto fs-5 text-muted">Tras finalizar la grabación, obtendrá un enlace que podrá compartir asíncronamente.
         </p>
         <div class="d-inline-flex gap-2 mb-5">
+
             <button class="d-inline-flex align-items-center btn btn-success btn-lg px-4 rounded-pill" type="button" id="btn-start-recording">
                 Iniciar grabación
             </button>
             <button class="btn btn-outline-danger btn-lg px-4 rounded-pill" type="button" id="btn-stop-recording" disabled style="display: none">
                 Finalizar grabación
             </button>
+        </div>
+        <div class="spinner-grow text-danger" role="status" id="recordingMessage" style="display:none;">
+            <span class="visually-hidden">Grabando...</span>
         </div>
         <div class="spinner-border" role="status" id="uploadingMessage" style="display:none;">
             <span class="visually-hidden">Procesando...</span>

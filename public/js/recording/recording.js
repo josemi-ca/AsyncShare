@@ -60,6 +60,9 @@ function stopRecordingCallback() {
     recorder.destroy();
     recorder = null;
 
+    let recordingMessage = document.getElementById('recordingMessage');
+    uploadingMessage.style.display = 'none';
+
     document.getElementById('btn-start-recording').disabled = false;
     document.getElementById('btn-start-recording').style.display = 'inline-block';
 
@@ -67,6 +70,7 @@ function stopRecordingCallback() {
 
 // Function to upload recorded video
 function uploadVideo(blob) {
+
     let uploadingMessage = document.getElementById('uploadingMessage');
     uploadingMessage.style.display = 'block';
 
@@ -118,6 +122,7 @@ document.getElementById('btn-start-recording').onclick = function () {
         document.getElementById('btn-stop-recording').disabled = false;
         document.getElementById('btn-start-recording').style.display = 'none';
         document.getElementById('btn-stop-recording').style.display = 'inline-block';
+        document.getElementById('recordingMessage').style.display = 'block';
     });
 };
 
@@ -125,6 +130,7 @@ document.getElementById('btn-start-recording').onclick = function () {
 document.getElementById('btn-stop-recording').onclick = function () {
     this.disabled = true;
     this.style.display = 'none';
+    document.getElementById('recordingMessage').style.display = 'none';
     recorder.stopRecording(stopRecordingCallback);
 };
 
