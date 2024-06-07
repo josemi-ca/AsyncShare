@@ -145,6 +145,9 @@ function addStreamStopListener(stream, callback) {
 function displayVideoPath(videoPath) {
     const videoPathInput = document.getElementById('videoPathInput');
     videoPathInput.value = videoPath;
+
+    const emailVideo = document.getElementById('emailVideo');
+    emailVideo.href = 'mailto:?body=' +videoPath;
 }
 
 // Copy video path to clipboard

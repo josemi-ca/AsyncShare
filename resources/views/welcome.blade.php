@@ -27,6 +27,7 @@
             </div>
             <div class="col-5">
                 <button onclick="copyVideoPath()" class="btn btn-primary mb-3">Copiar enlace</button>
+                <a href="#" id="emailVideo" target="_blank"><button class="btn btn-primary mb-3">Enviar enlace</button></a>
             </div>
         </form>
     </div>
